@@ -27,7 +27,7 @@ jobs:
         run: flake8 app/app.py --max-line-length=100
 
       - name: Run tests
-        run: pytest app/tests/ -v
+        run: cd app && pytest tests/ -v
 
   build:
     name: Build Docker Image
